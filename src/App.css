@@ -1,0 +1,141 @@
+.contact-container {
+  display: flex;
+  background-size: cover;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.first-box{
+  background: #000;
+  height: 100%;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+.first-box img {
+ width: 100%;
+  height: 550px;
+   display: block;
+  object-fit: cover;
+}
+
+.form-wrapper {
+  position: relative;
+  z-index: 1;
+  background: #000;
+  max-width: 450px;
+  width: 100%;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  animation: slideInUp 0.8s ease-in-out;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 2em;
+  color: #0dd438;
+  margin-bottom: 1.5em;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 1.5em;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+  color: #dad2d2;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.8em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1em;
+  background-color: #f4f4f4;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.submit-button {
+  display: inline-block;
+  width: 100%;
+  padding: 0.8em 1em;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.submit-button:active {
+  background-color: #004494;
+  transform: translateY(1px);
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 480px) {
+  .contact-form {
+    padding: 1.5em;
+    margin: 10px;
+  }
+
+  .form-input,
+  .submit-button {
+    padding: 0.7em;
+    font-size: 0.95em;
+  }
+}
