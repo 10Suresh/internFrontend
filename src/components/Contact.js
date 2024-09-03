@@ -19,8 +19,10 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      console.log(process.env.REACT_APP_BACKEND_URL, "url");
-      const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/send`,formData);
+      const response = await axios.post(
+        `${process.env.REACT_APP_BACKEND_URL}/api/send`,
+        formData
+      );
       if (response.status === 200) {
         toast.success('Message sent successfully');
         setFormData({
